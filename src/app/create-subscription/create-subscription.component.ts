@@ -98,13 +98,13 @@ export class CreateSubscriptionComponent {
   }
 
   getEmailErrorMessage(): string {
-    return this.email.hasError('required') ? 'Field is required' :
-      this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.email.hasError('required') ? 'Email is required' :
+      this.email.hasError('email') ? 'Enter a valid email' : '';
   }
 
   getPasswordErrorMessage(): string {
-    return this.password.hasError('required') ? 'Field is required' :
-      this.password.hasError('pattern') ? 'Not a valid password' : '';
+    return this.password.hasError('required') ? 'Password is required' :
+      this.password.hasError('pattern') ? 'Enter a valid password' : '';
   }
 
   get email(): AbstractControl { return this.subscriptionFormGroup.get('email'); }
